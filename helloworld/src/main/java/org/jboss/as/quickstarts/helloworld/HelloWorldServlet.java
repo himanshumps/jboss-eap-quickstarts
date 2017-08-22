@@ -40,10 +40,10 @@ import javax.servlet.http.HttpServletResponse;
  * 
  */
 @SuppressWarnings("serial")
-@WebServlet("/HelloWorld")
+@WebServlet("/")
 public class HelloWorldServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
+    static String PAGE_HEADER = "<html><head><title>JBoss EAP 6.4</title></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 
@@ -55,7 +55,7 @@ public class HelloWorldServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1>" + helloService.createHelloMessage("World") + "</h1>");
+        writer.println("<h1>" + helloService.createHelloMessage() + "</h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }

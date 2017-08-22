@@ -24,8 +24,8 @@ package org.jboss.as.quickstarts.helloworld;
  */
 public class HelloService {
 
-    String createHelloMessage(String name) {
-        return "Hello " + name + "!";
+    String createHelloMessage() {
+        return "Hi ! Greetings from Jboss EAP 6.4!";
     }
 
 }
